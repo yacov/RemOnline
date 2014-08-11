@@ -1,4 +1,0 @@
-RemOnline
-=========
-
-repo for autotests
