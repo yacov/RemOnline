@@ -1,3 +1,19 @@
+package telran.j.selenium;
+
+import java.util.regex.Pattern;
+import java.util.concurrent.TimeUnit;
+import org.testng.*;
+import org.testng.annotations.*;
+import static org.junit.Assert.*;
+import static org.hamcrest.CoreMatchers.*;
+import org.openqa.selenium.*;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.Select;
+public class Test extends telran.j.selenium.pages.TestBase {
+private boolean acceptNextAlert = true;
+private StringBuffer verificationErrors = new StringBuffer () ;
+@Test
+public void test () throws Exception {
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
@@ -60,3 +76,29 @@
 </tbody></table>
 </body>
 </html>
+}
+
+private boolean isElementPresent (By by) {
+try {
+driver.findElement (by);
+return true;
+} catch (NoSuchElementException e) {
+return false;
+}
+}
+
+private String closeAlertAndGetItsText() {
+try {
+Alert alert = driver.switchTo().alert();
+String alertText = alert.getText ();
+if (acceptNextAlert) {
+alert.accept();
+} else {
+alert.dismiss();
+}
+return alertText;
+} finally {
+acceptNextAlert = true;
+}
+}
+}
