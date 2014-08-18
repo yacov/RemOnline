@@ -1,0 +1,1 @@
+This table shows all the shops of the company. Each workshop may have its own unique code and color

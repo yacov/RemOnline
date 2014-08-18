@@ -1,0 +1,1 @@
+Each employee has a login and password to enter the RemontOnlayn, as well as the interest rate for the payroll. Role - a list of rights and opportunities that exist at the employee. Table 'access to the workshops' indicates to which an employee has access to workshops

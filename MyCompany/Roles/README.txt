@@ -1,0 +1,1 @@
+Role - a list of rights and opportunities that exist at the employee
