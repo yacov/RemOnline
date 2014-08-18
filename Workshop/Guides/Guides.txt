@@ -1,0 +1,20 @@
+Type of device 
+Reference types of devices and products 
+
+Manufacturer / Brand 
+Directory of manufacturers / brands 
+
+Price list of works 
+Price list of works and services running in your company with a price for the work / service 
+
+Faults 
+The list of typical faults 
+
+Options 
+Directory of equipment elements 
+
+Suppliers 
+List of suppliers of the company 
+
+Order type 
+List of order types
