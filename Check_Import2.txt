@@ -1,0 +1,11 @@
+    try {
+      assertTrue(isElementPresent(By.xpath("//i[@class=\"h-mt-20 b-file-import__icon b-file-import__icon_type_success\"]")));
+    } catch (Error e) {
+      verificationErrors.append(e.toString());
+    }
+   
+  try {
+      assertEquals("?????? ???????? ???????? ???????", driver.findElement(By.xpath("//h3[@class=\"col-xs-12 h-p-0 h-mt-20 h-ta-c\"]")).getText());
+    } catch (Error e) {
+      verificationErrors.append(e.toString());
+    }
