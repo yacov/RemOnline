@@ -1,0 +1,5 @@
+driver.get(baseUrl + "/app#!/clients");
+driver.findElement(By.xpath("//div[@id='container']/div/div/div[2]/div/button[2]")).click();
+driver.findElement(By.xpath("//div[2]/div/div/button")).click();
+driver.sendKeys("/Users/sso/the/local/path/to/darkbulb.jpg");
+driver.findElement(By.xpath("//div[2]/div[2]/div/button")).click();
