@@ -1,0 +1,52 @@
+package ru.telran.sel;
+
+import java.util.regex.Pattern;
+import j ava.util.concurrent.TimeUnit;
+import org.testng.*;
+import org.testng.annotations.*;
+import static org.junit.Assert.*;
+import static org.hamcrest.CoreMatchers.*;
+import org.openqa.selenium.*;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.Select;
+public class AddClient extends ru.telran.sel.pages.TestBase {
+private boolean acceptNextAlert = true;
+private StringBuffer verificationErrors = new StringBuffer () ;
+@Test
+public void testAddClient () throws Exception {
+    try {
+      assertTrue(isElementPresent(By.xpath("//i[@class=\"h-mt-20 b-file-import__icon b-file-import__icon_type_success\"]")));
+    } catch (Error e) {
+      verificationErrors.append(e.toString());
+    }
+    try {
+      assertEquals("?????? ???????? ???????? ???????", driver.findElement(By.xpath("//h3[@class=\"col-xs-12 h-p-0 h-mt-20 h-ta-c\"]")).getText());
+    } catch (Error e) {
+      verificationErrors.append(e.toString());
+    }
+}
+
+private boolean isElementPresent (By by) {
+try {
+driver.findElement (by);
+return true;
+} catch (NoSuchElementException e) {
+return false;
+}
+}
+
+private String closeAlertAndGetItsText() {
+try {
+Alert alert = driver.switchTo().alert();
+String alertText = alert.getText ();
+if (acceptNextAlert) {
+alert.accept();
+} else {
+alert.dismiss();
+}
+return alertText;
+} finally {
+acceptNextAlert = true;
+}
+}
+}
